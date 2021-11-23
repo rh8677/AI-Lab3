@@ -74,4 +74,4 @@ if __name__ == '__main__':
             try_file(file)
             predict_language(hypothesis, file)
     else:
-        print("Unknown command:", sys.argv[1])
+        print("Unknown command: " + sys.argv[1])
