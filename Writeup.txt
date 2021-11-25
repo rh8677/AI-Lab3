@@ -1,0 +1,35 @@
+The features that I chose were as follows:
+
+1. Whether the sentence contains the word "de".
+2. Whether the length of the word of a sentence was greater than 11.
+3. Whether a word of the sentence contained the letters "ui".
+4. Whether a word of the sentence contained the letters "oo".
+5. Whether a word of the sentence contained the letter "Q" or "q".
+
+The first feature was chosen simply because the word "de" is not found in English, but in Dutch. So if a sentence has
+this word, it is definitely a Dutch sentence.
+
+The second feature was chosen because words in Dutch are usually very lengthy.
+
+The third feature was chosen because the letters "ui" appears very rarely in English words, but a lot more common in
+Dutch ones.
+
+The fourth feature was chosen because the letters "oo" appears more frequently in Dutch words than in English, by a good
+amount.
+
+The final feature was chosen because the letter "q" is the least used in Dutch.
+
+
+For the decision tree, I used the formula for the information gain to retrieve the information gain for each of the 5
+features, then based on the feature with the best info gain (which became the root node), I retrieved the information
+gain for the other 4 attributes, with the precondition that the best feature was either present or absent, etc, etc. I
+decided for the maximum depth of the decision tree to be 4, because that is the standard across many videos that I've
+tried to use to help me with this assignment. The output file format is always the same, but the content was dependent
+on the test results. If the best attribute was 'Q', then it would go at the top, then if the best given Q is true was
+the length, it would go on the left of Q, so on and so forth.
+
+
+For the adaboost, I also used the formula for the information gain to retrieve the information gain for each of the 5
+features, but I created stumps (tree with 3 attributes only) with the premise that each attribute was either true or
+false, leading to a total of 5 stumps. Only 3 of the 5 stumps were really useful, because "ui" and "oo" did not give a
+clear indicator of whether a sentence was English or Dutch.

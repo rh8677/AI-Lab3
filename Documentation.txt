@@ -1,0 +1,11 @@
+To begin, you would want to insert values into the command-line as described in the lab writeup, eg:
+    train <examples> <hypothesisOut> <learning-type>
+                    or
+    predict <hypothesis> <file>
+
+If the first statement is run, the output will be whatever name you had for <hypothesisOut>.
+If the second statement is run, the output to the console will be a bunch of guesses for the language.
+
+The suggested method is - train example.txt hypothesis.txt dt/ada
+                            then
+                          predict hypothesis.txt test_examples.txt
